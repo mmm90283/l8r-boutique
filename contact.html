@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>L8R — Контакты</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <h1>L8R Бутик дизайнерских сумок</h1>
+            <img src="images/logo.jpg" alt="Логотип бутика" width="160" height="100">
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="container">
+            <h2>Свяжитесь с нами</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <h3>Наш бутик</h3>
+                    <p><strong>Адрес:</strong> г. Воронеж, ул. Плехановская, 15</p>
+                    <p><strong>Режим работы:</strong><br>Пн-Пт: 11:00 — 20:00<br>Сб-Вс: 12:00 — 19:00</p>
+                    <p><strong>Телефон:</strong> +7 (473) 123-45-67</p>
+                    <p><strong>Email:</strong> info@l8r.ru</p>
+                    
+                    <div class="map-placeholder">
+                        <img src="images/boutique.jpg" alt="Бутик L8R в Воронеже">
+                        <p class="map-caption">Ждём вас в гости! Примерка без записи</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-card">
+                    <h3>Оставить заявку</h3>
+                    <p style="margin-bottom: 20px;">Хотите примерить сумку или нужна консультация? Оставьте заявку — мы свяжемся с вами!</p>
+                    
+                    <form id="contactForm" action="save.php" method="POST">
+                        <div class="form-group">
+                            <label>Ваше имя *</label>
+                            <input type="text" name="contactName" id="contactName">
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" name="contactEmail" id="contactEmail">
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Телефон</label>
+                            <input type="tel" name="contactPhone" id="contactPhone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Интересующая модель</label>
+                            <select name="contactProduct" id="contactProduct">
+                                <option value="">Выберите модель</option>
+                                <option>Сумка Devotoin small</option>
+                                <option>Сумка Dolce Angel Cherub</option>
+                                <option>Клатч Marlene</option>
+                                <option>Сумка 3.5</option>
+                                <option>Сумка Barocco Clock</option>
+                                <option>Клатч Dolce Box</option>
+                                <option>Другая модель</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Сообщение *</label>
+                            <textarea name="contactMessage" id="contactMessage" rows="4" placeholder="Напишите, когда вам удобно прийти на примерку или какой вопрос вас интересует"></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Отправить заявку</button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Часто задаваемые вопросы</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Можно ли примерить сумку перед покупкой? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Да! Все модели доступны для примерки в нашем бутике в Воронеже. Приходите в удобное для вас время, запись не требуется.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Есть ли доставка по России? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">На данный момент приобрести наши сумки можно только в бутике в Воронеже. Это позволяет вам лично оценить качество и выбрать идеальную модель. Мы планируем запустить доставку в будущем!</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Можно ли заказать индивидуальный пошив? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Да, мы принимаем заказы на индивидуальный пошив. Свяжитесь с нами для обсуждения деталей — вы можете выбрать кожу, фурнитуру и создать уникальную сумку.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Как узнать о поступлении новых коллекций? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Подпишитесь на наш Telegram-канал или Instagram — там мы анонсируем все новинки. Или оставьте заявку на сайте, и мы добавим вас в рассылку.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 L8R Бутик дизайнерских сумок | Воронеж, ул. Плехановская, 15</p>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modal-img" src="" alt="Увеличенное фото">
+    </div>
+
+    <button id="toTop" title="Наверх">↑</button>
+
+   <script src="js/script.js"></script>
+</body>
+</html>

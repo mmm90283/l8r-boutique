@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>L8R — Каталог сумок</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <h1>L8R Бутик дизайнерских сумок</h1>
+            <img src="images/logo.jpg" alt="Логотип бутика" width="160" height="100">
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Найти сумку..." class="search-input">
+                <button id="searchClear" class="search-clear" style="display: none;">✕</button>
+            </div>
+            <div class="filters">
+                <button data-filter="all" class="active">Все модели</button>
+                <button data-filter="classic">Сумки</button>
+                <button data-filter="clutch">Клатчи</button>
+            </div>
+
+            <div class="catalog-grid">
+                <div class="product-card" data-category="classic">
+                    <img src="images/bag1.jpg" alt="Сумка Devotoin small" class="product-img">
+                    <div class="product-info">
+                        <h3>Сумка Devotoin small</h3>
+                        <div class="product-price">18 990 ₽</div>
+                        <div class="product-actions">
+                            <button class="detail-btn" data-id="1">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="classic">
+                    <img src="images/bag2.jpg" alt="Сумка Dolce Angel Cherub" class="product-img">
+                    <div class="product-info">
+                        <h3>Сумка Dolce Angel Cherub</h3>
+                        <div class="product-price">20 000 ₽</div>
+                        <div class="product-actions">
+                            <button class="detail-btn" data-id="2">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="classic">
+                    <img src="images/bag4.jpg" alt="Сумка 3.5" class="product-img">
+                    <div class="product-info">
+                        <h3>Сумка 3.5</h3>
+                        <div class="product-price">15 990 ₽</div>
+                        <div class="product-actions">
+                            <button class="detail-btn" data-id="3">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="classic">
+                    <img src="images/bag5.jpg" alt="Сумка Barocco Clock" class="product-img">
+                    <div class="product-info">
+                        <h3>Сумка Barocco Clock</h3>
+                        <div class="product-price">25 000 ₽</div>
+                        <div class="product-actions">
+                            <button class="detail-btn" data-id="4">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="classic">
+                    <img src="images/bag7.jpg" alt="Сумка Sicily large" class="product-img">
+                    <div class="product-info">
+                        <h3>Сумка Sicily large</h3>
+                        <div class="product-price">35 000 ₽</div>
+                        <div class="product-actions">
+                            <button class="detail-btn" data-id="5">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="classic">
+                    <img src="images/bag8.jpg" alt="Сумка Sicily Clock" class="product-img">
+                    <div class="product-info">
+                        <h3>Сумка Sicily Clock</h3>
+                        <div class="product-price">17 990 ₽</div>
+                        <div class="product-actions">
+                            <button class="detail-btn" data-id="6">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="clutch">
+                    <img src="images/bag3.jpg" alt="Клатч Marlene" class="product-img">
+                    <div class="product-info">
+                        <h3>Клатч Marlene</h3>
+                        <div class="product-price">21 490 ₽</div>
+                        <div class="product-actions">
+                            <button class="detail-btn" data-id="7">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="clutch">
+                    <img src="images/bag6.jpg" alt="Клатч Dolce Box" class="product-img">
+                    <div class="product-info">
+                        <h3>Клатч Dolce Box</h3>
+                        <div class="product-price">9 990 ₽</div>
+                        <div class="product-actions">
+                            <button class="detail-btn" data-id="8">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="buy-info-simple">
+                <p>Все представленные модели доступны для примерки в нашем бутике по адресу:</p>
+                <p class="buy-address-bold">📍 г. Воронеж, ул. Плехановская, 15</p>
+                <p>Вы также можете оставить заявку на сайте — мы свяжемся с вами!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 L8R Бутик дизайнерских сумок | Воронеж, ул. Плехановская, 15</p>
+        </div>
+    </footer>
+
+    <div id="quickModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="quickModalBody"></div>
+        </div>
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="productModalBody"></div>
+        </div>
+    </div>
+
+    <button id="toTop" title="Наверх">↑</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
