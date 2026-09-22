@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mmm90283.github.io/l8r-boutique/sitemap.xml
