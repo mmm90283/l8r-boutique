@@ -2,26 +2,44 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>L8R — О нас</title>
+    <title>О бренде L8R — итальянские сумки ручной работы</title>
+    <meta name="description" content="История бренда L8R — итальянские сумки ручной работы с 2018 года. Натуральная кожа, 24-каратное золото, мастера с опытом 30+ лет.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="CSS/style.min.css">
 </head>
 <body>
     <header class="site-header">
         <div class="header-container">
             <h1>L8R Бутик дизайнерских сумок</h1>
-            <img src="images/logo.jpg" alt="Логотип бутика" width="160" height="100">
+            <img src="images/logo.jpg" alt="Логотип бутика" width="160" height="100" loading="eager" fetchpriority="high">
         </div>
     </header>
     
-    <nav>
+    <!-- BreadcrumbList -->
+    <nav itemscope itemtype="https://schema.org/BreadcrumbList">
         <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="contact.html">Контакты</a></li>
-            <li><a href="gallery.html">Галерея</a></li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="index.html" itemprop="item"><span itemprop="name">Главная</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="catalog.html" itemprop="item"><span itemprop="name">Каталог</span></a>
+                <meta itemprop="position" content="2">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="about.html" itemprop="item"><span itemprop="name">О нас</span></a>
+                <meta itemprop="position" content="3">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="contact.html" itemprop="item"><span itemprop="name">Контакты</span></a>
+                <meta itemprop="position" content="4">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="gallery.html" itemprop="item"><span itemprop="name">Галерея</span></a>
+                <meta itemprop="position" content="5">
+            </li>
         </ul>
     </nav>
     
@@ -50,7 +68,7 @@
                     </ul>
                 </div>
                 <div class="about-gallery">
-                    <img src="images/master.jpg" alt="Мастерская L8R в Милане">
+                    <img src="images/master.jpg" alt="Мастерская L8R в Милане" width="400" height="500" loading="lazy">
                 </div>
             </div>
 
@@ -117,9 +135,16 @@
         </div>
     </main>
 
-    <footer>
+    <footer itemscope itemtype="https://schema.org/Organization">
         <div class="container">
-            <p>© 2026 L8R Бутик дизайнерских сумок | Воронеж, ул. Плехановская, 15</p>
+            <p>© 2026 <span itemprop="name">L8R Бутик дизайнерских сумок</span></p>
+            <meta itemprop="url" content="https://mmm90283.github.io/l8r-boutique/">
+            <meta itemprop="telephone" content="+7 (473) 123-45-67">
+            <meta itemprop="email" content="info@l8r.ru">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="addressLocality">Воронеж</span>,
+                <span itemprop="streetAddress">ул. Плехановская, 15</span>
+            </span>
         </div>
     </footer>
 

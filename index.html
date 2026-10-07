@@ -2,12 +2,12 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>L8R — Бутик дизайнерских сумок</title>
-    <meta name="description" content="L8R — бутик дизайнерских сумок ручной работы из итальянской кожи. Эксклюзивные модели, примерка в Воронеже.">
+    <title>L8R — Бутик дизайнерских сумок ручной работы</title>
+    <meta name="description" content="Дизайнерские сумки ручной работы из итальянской кожи. Эксклюзивные модели, примерка в Воронеже.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="CSS/style.min.css">
-
 </head>
 <body>
 
@@ -18,20 +18,35 @@
         </div>
     </header>
 
-    <nav>
+    <!-- BreadcrumbList -->
+    <nav itemscope itemtype="https://schema.org/BreadcrumbList">
         <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="contact.html">Контакты</a></li>
-            <li><a href="gallery.html">Галерея</a></li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="index.html" itemprop="item"><span itemprop="name">Главная</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="catalog.html" itemprop="item"><span itemprop="name">Каталог</span></a>
+                <meta itemprop="position" content="2">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="about.html" itemprop="item"><span itemprop="name">О нас</span></a>
+                <meta itemprop="position" content="3">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="contact.html" itemprop="item"><span itemprop="name">Контакты</span></a>
+                <meta itemprop="position" content="4">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="gallery.html" itemprop="item"><span itemprop="name">Галерея</span></a>
+                <meta itemprop="position" content="5">
+            </li>
         </ul>
     </nav>
 
     <main>
         <div class="container">
             
-            <!-- ГЕРОЙ СЕКЦИЯ (приветствие) -->
             <section class="hero-section">
                 <h2>Добро пожаловать в бутик L8R!</h2>
                 <p class="hero-subtitle">Сицилийская роскошь в каждой детали</p>
@@ -43,7 +58,6 @@
                 <a href="catalog.html" class="btn hero-btn">Смотреть коллекцию →</a>
             </section>
 
-            <!-- ПОЧЕМУ ПОКУПАЮТ У НАС (преимущества для клиента) -->
             <section class="advantages-home">
                 <h2>Что мы предлагаем</h2>
                 <div class="advantages-grid">
@@ -70,7 +84,6 @@
                 </div>
             </section>
 
-            <!-- КАК ПРОИСХОДИТ ПОКУПКА (инструкция) -->
             <section class="how-to-buy">
                 <h2>Как приобрести сумку L8R</h2>
                 <div class="steps-grid">
@@ -102,22 +115,28 @@
                 </div>
             </section>
 
-           <!-- ПОДПИШИТЕСЬ НА НАС (соцсети) -->
             <section class="social-follow">
                 <h2>Следите за нами</h2>
                 <p class="social-subtitle">Будьте в курсе новинок и акций</p>
                 <div class="social-links">
                     <a href="#" class="social-link"> Instagram</a>
-                    <a href="https://vk.com/akcentbags?ysclid=mnosw4bb8z955002968" class="social-link"> VK</a>
+                    <a href="https://vk.com/akcentbags" class="social-link"> VK</a>
                 </div>
             </section>
 
         </div>
     </main>
 
-    <footer>
+    <footer itemscope itemtype="https://schema.org/Organization">
         <div class="container">
-            <p>© 2026 L8R Бутик дизайнерских сумок | Воронеж, ул. Плехановская, 15</p>
+            <p>© 2026 <span itemprop="name">L8R Бутик дизайнерских сумок</span></p>
+            <meta itemprop="url" content="https://mmm90283.github.io/l8r-boutique/">
+            <meta itemprop="telephone" content="+7 (473) 123-45-67">
+            <meta itemprop="email" content="info@l8r.ru">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="addressLocality">Воронеж</span>,
+                <span itemprop="streetAddress">ул. Плехановская, 15</span>
+            </span>
         </div>
     </footer>
 

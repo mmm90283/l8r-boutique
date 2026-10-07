@@ -2,26 +2,43 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>L8R — Каталог сумок</title>
+    <title>Каталог дизайнерских сумок L8R — цены и фото</title>
+    <meta name="description" content="Каталог дизайнерских сумок L8R. Сумки и клатчи ручной работы. Цены, характеристики, фото. Примерка в бутике Воронежа.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="CSS/style.min.css">
 </head>
 <body>
     <header class="site-header">
         <div class="header-container">
             <h1>L8R Бутик дизайнерских сумок</h1>
-            <img src="images/logo.jpg" alt="Логотип бутика" width="160" height="100">
+            <img src="images/logo.jpg" alt="Логотип бутика" width="160" height="100" loading="eager" fetchpriority="high">
         </div>
     </header>
     
-    <nav>
+    <!-- BreadcrumbList (хлебные крошки) -->
+    <nav itemscope itemtype="https://schema.org/BreadcrumbList">
         <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="contact.html">Контакты</a></li>
-            <li><a href="gallery.html">Галерея</a></li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="index.html" itemprop="item"><span itemprop="name">Главная</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="catalog.html" itemprop="item"><span itemprop="name">Каталог</span></a>
+                <meta itemprop="position" content="2">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="about.html" itemprop="item"><span itemprop="name">О нас</span></a>
+                <meta itemprop="position" content="3">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="contact.html" itemprop="item"><span itemprop="name">Контакты</span></a>
+                <meta itemprop="position" content="4">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="gallery.html" itemprop="item"><span itemprop="name">Галерея</span></a>
+                <meta itemprop="position" content="5">
+            </li>
         </ul>
     </nav>
     
@@ -38,93 +55,143 @@
             </div>
 
             <div class="catalog-grid">
-                <div class="product-card" data-category="classic">
-                    <img src="images/bag1.jpg" alt="Сумка Devotoin small" class="product-img">
+                
+                <!-- Карточка 1 -->
+                <div class="product-card" data-category="classic" itemscope itemtype="https://schema.org/Product">
+                    <img src="images/bag1.jpg" alt="Сумка Devotoin small" class="product-img" itemprop="image" width="400" height="400" loading="lazy">
                     <div class="product-info">
-                        <h3>Сумка Devotoin small</h3>
-                        <div class="product-price">18 990 ₽</div>
+                        <h3 itemprop="name">Сумка Devotoin small</h3>
+                        <p itemprop="description" style="display:none;">Элегантная сумка из натуральной итальянской кожи</p>
+                        <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="RUB">
+                            <span itemprop="price">18990</span> ₽
+                            <link itemprop="availability" href="https://schema.org/InStock">
+                        </div>
                         <div class="product-actions">
                             <button class="detail-btn" data-id="1">Подробнее</button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="product-card" data-category="classic">
-                    <img src="images/bag2.jpg" alt="Сумка Dolce Angel Cherub" class="product-img">
+                <!-- Карточка 2 -->
+                <div class="product-card" data-category="classic" itemscope itemtype="https://schema.org/Product">
+                    <img src="images/bag2.jpg" alt="Сумка Dolce Angel Cherub" class="product-img" itemprop="image" width="400" height="400" loading="lazy">
                     <div class="product-info">
-                        <h3>Сумка Dolce Angel Cherub</h3>
-                        <div class="product-price">20 000 ₽</div>
+                        <h3 itemprop="name">Сумка Dolce Angel Cherub</h3>
+                        <p itemprop="description" style="display:none;">Сумка из бархата с ручной росписью</p>
+                        <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="RUB">
+                            <span itemprop="price">20000</span> ₽
+                            <link itemprop="availability" href="https://schema.org/InStock">
+                        </div>
                         <div class="product-actions">
                             <button class="detail-btn" data-id="2">Подробнее</button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="product-card" data-category="classic">
-                    <img src="images/bag4.jpg" alt="Сумка 3.5" class="product-img">
+                <!-- Карточка 3 -->
+                <div class="product-card" data-category="classic" itemscope itemtype="https://schema.org/Product">
+                    <img src="images/bag4.jpg" alt="Сумка 3.5" class="product-img" itemprop="image" width="400" height="400" loading="lazy">
                     <div class="product-info">
-                        <h3>Сумка 3.5</h3>
-                        <div class="product-price">15 990 ₽</div>
+                        <h3 itemprop="name">Сумка 3.5</h3>
+                        <p itemprop="description" style="display:none;">Сумка с декоративными элементами и стразами</p>
+                        <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="RUB">
+                            <span itemprop="price">15990</span> ₽
+                            <link itemprop="availability" href="https://schema.org/InStock">
+                        </div>
                         <div class="product-actions">
                             <button class="detail-btn" data-id="3">Подробнее</button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="product-card" data-category="classic">
-                    <img src="images/bag5.jpg" alt="Сумка Barocco Clock" class="product-img">
+                <!-- Карточка 4 -->
+                <div class="product-card" data-category="classic" itemscope itemtype="https://schema.org/Product">
+                    <img src="images/bag5.jpg" alt="Сумка Barocco Clock" class="product-img" itemprop="image" width="400" height="400" loading="lazy">
                     <div class="product-info">
-                        <h3>Сумка Barocco Clock</h3>
-                        <div class="product-price">25 000 ₽</div>
+                        <h3 itemprop="name">Сумка Barocco Clock</h3>
+                        <p itemprop="description" style="display:none;">Сумка с кружевным узором и цветочными мотивами</p>
+                        <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="RUB">
+                            <span itemprop="price">25000</span> ₽
+                            <link itemprop="availability" href="https://schema.org/InStock">
+                        </div>
                         <div class="product-actions">
                             <button class="detail-btn" data-id="4">Подробнее</button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="product-card" data-category="classic">
-                    <img src="images/bag7.jpg" alt="Сумка Sicily large" class="product-img">
+                <!-- Карточка 5 -->
+                <div class="product-card" data-category="classic" itemscope itemtype="https://schema.org/Product">
+                    <img src="images/bag7.jpg" alt="Сумка Sicily large" class="product-img" itemprop="image" width="400" height="400" loading="lazy">
                     <div class="product-info">
-                        <h3>Сумка Sicily large</h3>
-                        <div class="product-price">35 000 ₽</div>
+                        <h3 itemprop="name">Сумка Sicily large</h3>
+                        <p itemprop="description" style="display:none;">Сумка с леопардовым принтом и магнитным замком</p>
+                        <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="RUB">
+                            <span itemprop="price">35000</span> ₽
+                            <link itemprop="availability" href="https://schema.org/InStock">
+                        </div>
                         <div class="product-actions">
                             <button class="detail-btn" data-id="5">Подробнее</button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="product-card" data-category="classic">
-                    <img src="images/bag8.jpg" alt="Сумка Sicily Clock" class="product-img">
+                <!-- Карточка 6 -->
+                <div class="product-card" data-category="classic" itemscope itemtype="https://schema.org/Product">
+                    <img src="images/bag8.jpg" alt="Сумка Sicily Clock" class="product-img" itemprop="image" width="400" height="400" loading="lazy">
                     <div class="product-info">
-                        <h3>Сумка Sicily Clock</h3>
-                        <div class="product-price">17 990 ₽</div>
+                        <h3 itemprop="name">Сумка Sicily Clock</h3>
+                        <p itemprop="description" style="display:none;">Сумка с рисунком циферблата часов и цветами</p>
+                        <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="RUB">
+                            <span itemprop="price">17990</span> ₽
+                            <link itemprop="availability" href="https://schema.org/InStock">
+                        </div>
                         <div class="product-actions">
                             <button class="detail-btn" data-id="6">Подробнее</button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="product-card" data-category="clutch">
-                    <img src="images/bag3.jpg" alt="Клатч Marlene" class="product-img">
+                <!-- Карточка 7 (клатч) -->
+                <div class="product-card" data-category="clutch" itemscope itemtype="https://schema.org/Product">
+                    <img src="images/bag3.jpg" alt="Клатч Marlene" class="product-img" itemprop="image" width="400" height="400" loading="lazy">
                     <div class="product-info">
-                        <h3>Клатч Marlene</h3>
-                        <div class="product-price">21 490 ₽</div>
+                        <h3 itemprop="name">Клатч Marlene</h3>
+                        <p itemprop="description" style="display:none;">Вечерний клатч с кружевным узором и застёжкой-кастет</p>
+                        <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="RUB">
+                            <span itemprop="price">21490</span> ₽
+                            <link itemprop="availability" href="https://schema.org/InStock">
+                        </div>
                         <div class="product-actions">
                             <button class="detail-btn" data-id="7">Подробнее</button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="product-card" data-category="clutch">
-                    <img src="images/bag6.jpg" alt="Клатч Dolce Box" class="product-img">
+                <!-- Карточка 8 (клатч) -->
+                <div class="product-card" data-category="clutch" itemscope itemtype="https://schema.org/Product">
+                    <img src="images/bag6.jpg" alt="Клатч Dolce Box" class="product-img" itemprop="image" width="400" height="400" loading="lazy">
                     <div class="product-info">
-                        <h3>Клатч Dolce Box</h3>
-                        <div class="product-price">9 990 ₽</div>
+                        <h3 itemprop="name">Клатч Dolce Box</h3>
+                        <p itemprop="description" style="display:none;">Бархатный клатч с вышивкой стразами и застёжкой-черепами</p>
+                        <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <meta itemprop="priceCurrency" content="RUB">
+                            <span itemprop="price">9990</span> ₽
+                            <link itemprop="availability" href="https://schema.org/InStock">
+                        </div>
                         <div class="product-actions">
                             <button class="detail-btn" data-id="8">Подробнее</button>
                         </div>
                     </div>
                 </div>
+                
             </div>
             
             <div class="buy-info-simple">
@@ -135,9 +202,16 @@
         </div>
     </main>
 
-    <footer>
+    <footer itemscope itemtype="https://schema.org/Organization">
         <div class="container">
-            <p>© 2026 L8R Бутик дизайнерских сумок | Воронеж, ул. Плехановская, 15</p>
+            <p>© 2026 <span itemprop="name">L8R Бутик дизайнерских сумок</span></p>
+            <meta itemprop="url" content="https://mmm90283.github.io/l8r-boutique/">
+            <meta itemprop="telephone" content="+7 (473) 123-45-67">
+            <meta itemprop="email" content="info@l8r.ru">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="addressLocality">Воронеж</span>,
+                <span itemprop="streetAddress">ул. Плехановская, 15</span>
+            </span>
         </div>
     </footer>
 
