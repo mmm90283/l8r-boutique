@@ -52,8 +52,9 @@
                     <h3>Наш бутик</h3>
                     <p><strong>Адрес:</strong> г. Воронеж, ул. Плехановская, 15</p>
                     <p><strong>Режим работы:</strong><br>Пн-Пт: 11:00 — 20:00<br>Сб-Вс: 12:00 — 19:00</p>
-                    <p><strong>Телефон:</strong> +7 (473) 123-45-67</p>
-                    <p><strong>Email:</strong> info@l8r.ru</p>
+                    <!-- ЦЕЛЬ phone_click -->
+                    <p><strong>Телефон:</strong> <a href="tel:+74731234567" onclick="ym(113898928, 'reachGoal', 'phone_click'); return true;">+7 (473) 123-45-67</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@l8r.ru">info@l8r.ru</a></p>
                     
                     <div class="map-placeholder">
                         <img src="images/boutique.jpg" alt="Бутик L8R в Воронеже" width="400" height="300" loading="lazy">
@@ -68,13 +69,15 @@
                     <form id="contactForm" action="save.php" method="POST">
                         <div class="form-group">
                             <label>Ваше имя *</label>
-                            <input type="text" name="contactName" id="contactName">
+                            <!-- ВАЛИДАЦИЯ -->
+                            <input type="text" name="contactName" id="contactName" required minlength="2">
                             <span class="error-message" id="nameError"></span>
                         </div>
                         
                         <div class="form-group">
                             <label>Email *</label>
-                            <input type="email" name="contactEmail" id="contactEmail">
+                            <!-- ВАЛИДАЦИЯ -->
+                            <input type="email" name="contactEmail" id="contactEmail" required>
                             <span class="error-message" id="emailError"></span>
                         </div>
                         
@@ -99,11 +102,13 @@
                         
                         <div class="form-group">
                             <label>Сообщение *</label>
-                            <textarea name="contactMessage" id="contactMessage" rows="4" placeholder="Напишите, когда вам удобно прийти на примерку или какой вопрос вас интересует"></textarea>
+                            <!-- ВАЛИДАЦИЯ -->
+                            <textarea name="contactMessage" id="contactMessage" rows="4" placeholder="Напишите, когда вам удобно прийти на примерку или какой вопрос вас интересует" required></textarea>
                             <span class="error-message" id="messageError"></span>
                         </div>
                         
-                        <button type="submit" class="submit-btn">Отправить заявку</button>
+                        <!-- ЦЕЛЬ form_submit -->
+                        <button type="submit" class="submit-btn" onclick="ym(113898928, 'reachGoal', 'form_submit'); return true;">Отправить заявку</button>
                         <div id="formStatus" class="form-status"></div>
                     </form>
                 </div>
